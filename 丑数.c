@@ -16,7 +16,13 @@ int main()
 	int n ,res;
 	printf("请输入你想判断的那个数：");
 	scanf("%d",&n);
+	while(n < 0){
+		printf("输入有误，重新输入："); 
+		scanf("%d",&n);		
+	} 
+	
 	res = Judge(n);
+	
 	if(res){
 		printf("true");
 	}else{
