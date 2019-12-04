@@ -5,6 +5,9 @@ import java.util.Scanner;
 /**
  * @author:Aurevoir
  * @date: 2019/11/14  11:20
+ *
+ * 给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。
+ * 在杨辉三角中，每个数是它左上方和右上方的数的和。
  */
 public class N119 {
     public static void main(String[] args) {
