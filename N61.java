@@ -10,20 +10,20 @@
 解释:
 向右旋转 1 步: 5->1->2->3->4->NULL
 向右旋转 2 步: 4->5->1->2->3->NULL
- * public class ListNode {
+ * public class ListNode61 {
  *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
+ *     ListNode61 next;
+ *     ListNode61(int x) { val = x; }
  * }
  */
-class ListNode{
+class ListNode61 {
     int val;
-    ListNode next;
+    ListNode61 next;
 
-    public ListNode() {
+    public ListNode61() {
     }
 
-    ListNode(int x){
+    ListNode61(int x){
         this.val = x;
     }
 }
@@ -32,23 +32,23 @@ class ListNode{
 
 public class N61 {
     public static void main(String[] args) {
-        ListNode head1 = new ListNode(1);
-        ListNode head2 = new ListNode(2);
-        ListNode head3 = new ListNode(3);
-        ListNode head4 = new ListNode(4);
-        ListNode head5 = new ListNode(5);
+        ListNode61 head1 = new ListNode61(1);
+        ListNode61 head2 = new ListNode61(2);
+        ListNode61 head3 = new ListNode61(3);
+        ListNode61 head4 = new ListNode61(4);
+        ListNode61 head5 = new ListNode61(5);
         head1.next = head2;
         head2.next = null;
 
         int k = 2;
-        ListNode res = rotateRight(head1,k);
+        ListNode61 res = rotateRight(head1,k);
         while(res!=null){
             System.out.println(res.val);
             res = res.next;
         }
     }
 
-    private static ListNode rotateRight(ListNode head, int k) {
+    private static ListNode61 rotateRight(ListNode61 head, int k) {
         if(head == null){
             return null;
         }
@@ -56,7 +56,7 @@ public class N61 {
             return head;
         }
 
-        ListNode temp = head;
+        ListNode61 temp = head;
         int count = 1;
         for(;temp.next != null;count++){
             temp = temp.next;
@@ -64,7 +64,7 @@ public class N61 {
         temp.next = head;
 
 
-        ListNode temp1 = head;
+        ListNode61 temp1 = head;
         if(k == 0){
             temp.next = null;
             return head;
@@ -76,7 +76,7 @@ public class N61 {
         for(int i = 0;i < count - k % count - 1;i++){
             temp1 = temp1.next;
         }
-        ListNode temp2 = temp1.next;
+        ListNode61 temp2 = temp1.next;
         temp1.next = null;
         return temp2;
     }
